@@ -6,6 +6,10 @@
 int _printf(const char *format, ...);
 int _print_char(va_list args);
 int _print_str(va_list args);
+int print_hex(va_list args);
+
+
+int _printf(const char *format, ...);
 
 /* edits */
 int printrot13(va_list list);
