@@ -1,15 +1,19 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <stdio.h>
+
 #include <stdarg.h>
 
 int _printf(const char *format, ...);
-int _print_char(va_list args);
-int _print_str(va_list args);
+int print_char(va_list args);
+int print_str(va_list args);
+int print_int(va_list args);
+int print_binary(va_list args);
+int print_unsigned(va_list args);
 int print_hex(va_list args);
-
-
-int _printf(const char *format, ...);
+int print_octal(va_list args);
+int print_hex_upper(va_list args);
+int print_address(va_list args);
+int print_custom_string(va_list args);
 
 /* edits */
 int printrot13(va_list list);

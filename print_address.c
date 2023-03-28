@@ -1,22 +1,36 @@
 #include "main.h"
 
 /**
- * print_address - prints the address of a pointer
- * @args: the va_list containing the address to print
+ * print_address - Prints the memory address of a pointer argument
+ * @args: The argument list that contains the pointer to print
  *
- * Return: the number of characters printed
+ * Return: The number of digits printed
  */
 int print_address(va_list args)
 {
-    char buffer[1024];
-    void *ptr = va_arg(args, void *);
-    unsigned long int address = (unsigned long int)ptr;
-    int printed;
+	void *p = va_arg(args, void *);
+	unsigned long int address = (unsigned long int)p;
+	unsigned long int address_cpy = address;
+	int digits = 0;
 
-    if (!ptr)
-        return (_printf("(nil)"));
+	_putchar('0');
+	_putchar('x');
+	digits += 2;
 
-    printed = _sprintf(buffer, "0x%lx", address);
+	if (address == 0)
+	{
+		_putchar('0');
+		digits++;
+	}
+	else
+	{
+		while (address_cpy != 0)
+		{
+			address_cpy /= 16;
+			digits++;
+		}
+	}
 
-    return (write(STDOUT_FILENO, buffer, printed));
+	print_hex_lower_case(address);
+	return (digits);
 }
