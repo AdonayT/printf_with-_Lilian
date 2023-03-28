@@ -114,6 +114,11 @@ int is_digit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
+/* edits */
+int printrot13(va_list list);
+int revstring(va_list list);
+int get_length(const char *format, int *i);
+int get_precision(const char *format, int *i, va_list list);
+int get_width(const char *format, int *i, va_list list);
+int get_flags(const char *format, int *i);
 #endif /* MAIN_H */
-
-
