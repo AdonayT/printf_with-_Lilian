@@ -5,6 +5,7 @@ _printf is a custom implementation of the C programming function printf.
 Prototype: int _printf(const char *, ...);
 
 Project Requirements
+
 All files will be compiled on Ubuntu 14.04 LTS
 Programs and functions will be compiled with gcc 4.8.4 using flags -Wall -Werror -Wextra and -pedantic
 Code must follow the Betty style
@@ -19,11 +20,13 @@ va_copy (man 3 va_copy)
 va_arg (man 3 va_arg)
 
 Mandatory Tasks
+
  Write function that produces output with conversion specifiers c, s, and %.
  Handle conversion specifiers d, i.
  Create a man page for your function.
  
 Advanced Tasks
+
  Handle conversion specifier b.
  Handle conversion specifiers u, o, x, X.
  Use a local buffer of 1024 chars in order to call write as little as possible.
